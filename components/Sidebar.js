@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { signOut } from "next-auth/react";
 import { HomeIcon } from "@heroicons/react/solid";
 import {
   HashtagIcon,
@@ -31,8 +32,8 @@ const Sidebar = () => {
         <SidebarLink text="Profile" Icon={UserIcon} />
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
-      <button className="hidden xl:inline ml-auto rounded-full w-56 h-[52px] text-lg font-bold bg-blue-500 text-white">
-        Tweet
+      <button className="hidden xl:inline ml-auto rounded-full w-56 h-[52px] text-lg font-bold bg-blue-500 text-white" onClick={signOut}>
+        Logout
       </button>
       <div className="text-white flex items-center justify-center hoverAnimation xl:ml-auto xl:-mr-5 mt-auto">
         <div>
